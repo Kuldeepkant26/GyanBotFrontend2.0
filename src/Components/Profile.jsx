@@ -36,8 +36,7 @@ function Profile() {
     async function fetchUserP() {
         try {
             const res = await axios.get(`${import.meta.env.VITE_BURL}/auth/getuser/${id}`)
-            console.log("Testing----??")
-            console.log(res.data.user)
+          
             setThisUser(res.data.user)
         } catch (error) {
             logout()
