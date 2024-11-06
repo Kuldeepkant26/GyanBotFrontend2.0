@@ -1,0 +1,165 @@
+.comment-element {
+    width: 100%;
+    height: 88%;
+
+}
+
+.comment-element .all-comments {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+.comment-element .all-comments .comment-b {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 24px 24px 94px #a1a1a1,
+        -24px -24px 94px #ffffff;
+    padding: 0.5rem;
+  
+}
+
+.comment-element .all-comments .comment-b .editform {
+    position: absolute;
+    background-color: white;
+  
+    width: 100%;
+    top: 51px;
+    left: 0px;
+    height: 60%;
+    padding-left: 2.3rem;
+    padding-right: 1rem;
+    border-radius: 15px;
+    padding-bottom: 1rem;
+
+}
+
+.comment-element .all-comments .comment-b .editform textarea {
+    width: 100%;
+    height: 100%;
+    
+    outline: none;
+    border: 0px;
+    text-align: justify;
+    background-color: rgb(243, 241, 241);
+    border-radius: 15px;
+    padding: 5px;
+   
+
+}
+
+.comment-element .all-comments .comment-b .editform .btns {
+    position: absolute;
+    top: -45px;
+    right: 0px;
+}
+
+.comment-element .all-comments .comment-b .editform .btns button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: black;
+    margin: 0px 10px;
+    color: white;
+    border-radius: 10px;
+  
+}
+
+
+
+
+
+@media (max-width:600px) {
+    .comment-element .all-comments .comment-b .editform input {
+        width: 60%;
+    }
+}
+
+.comment-element .all-comments .comment-b .comment-menu {
+    background: #ffffff;
+    box-shadow: 24px 24px 94px #a1a1a1,
+        -24px -24px 94px #ffffff;
+    padding: 0.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.comment-element .all-comments .comment-b .owner-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.comment-element .all-comments .comment-b .owner-info .uname {
+    font-size: 0.8rem;
+}
+
+.comment-element .all-comments .comment-b .owner-info .profile {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-element .comment-form {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 0px 5px;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.comment-element .comment-form .profile {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+
+}
+
+.comment-element .comment-form input {
+    width: 73%;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding: 7px 0px;
+}
+
+
+
+/* From Uiverse.io by gharsh11032000 */
+.comment-element .comment-form .button {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+
+}

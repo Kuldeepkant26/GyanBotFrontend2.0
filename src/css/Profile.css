@@ -1,0 +1,301 @@
+.profile-page {
+    width: 100%;
+    /* border: 2px solid saddlebrown; */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    /* background-color: #ebe1e7; */
+    /* background-color: #eddbdd; */
+    /* background-color: #c8d7cb; */
+    /* background-color: #989EA1; */
+  
+
+
+}
+
+.profile-page .user-profile {
+    /* border: 1px solid salmon; */
+    width: 97%;
+    display: flex;
+    /* width: fit-content; */
+    margin: 1rem auto;
+    margin-bottom: 1rem;
+    /* justify-content: space-between; */
+    gap: 3rem;
+    padding: 1.5rem;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 12px #d9d9d9,
+        inset -6px -6px 12px #ffffff;
+}
+
+.profile-page .user-profile .following-followers {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    right: 25%;
+    bottom: -70px;
+    padding: 1rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+
+}
+
+.profile-page .user-profile .following-followers .person-card {
+    height: 3rem;
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+    margin-top: 1rem;
+}
+
+.profile-page .user-profile .following-followers .person-card img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+
+}
+
+.profile-page .user-profile .following-followers .person-card .profile {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+}
+
+.profile-page .user-profile .profile-menu {
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    border-radius: 11px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 14px 14px 28px #d9d9d9,
+        -14px -14px 28px #ffffff;
+}
+
+.profile-page .user-profile .profile-menu p {
+    cursor: pointer;
+}
+
+
+
+.profile-page .user-profile img {
+    /* border: 1px solid salmon; */
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-page .user-profile .user-info {
+    /* border: 1px solid rgb(114, 121, 250); */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.profile-page .user-profile .user-info .user-bio {
+    font-size: 0.8rem;
+    color: gray;
+    max-width: 70%;
+
+
+}
+
+.profile-page .user-profile .user-info .user-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.profile-page .user-profile .user-info .follow-info {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    gap: 3rem;
+
+}
+
+
+
+.profile-page .user-profile .user-info .btn {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+
+
+}
+
+.profile-page .user-profile .user-info .btn button,.profile-page .user-profile .user-info .btn .button {
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #ebebeb,
+        inset -5px -5px 10px #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+
+.profile-page .user-profile .user-info .btn button:hover {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 20px #d1d1d1,
+        inset -6px -6px 20px #ffffff;
+
+}
+
+
+
+.profile-page .profile-page-posts {
+    width: 500px;
+    /* border: 2px solid salmon; */
+    padding: 1rem 10px;
+    display: flex;
+    flex-direction: column;
+    /* background: #ffffff; */
+   
+
+    /* background-color: #c8d7cb;
+    background-color: #989EA1;
+    background-color: #C5C6D0;
+    background-color: #c5c6d07f; */
+
+
+
+}
+
+
+.profile-page .post-options {
+
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-page .post-options button {
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #ebebeb,
+        inset -5px -5px 10px #ffffff;
+}
+
+.profile-page .post-options button:hover {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 20px #d1d1d1,
+        inset -6px -6px 20px #ffffff;
+}
+
+.profile-page .profile-edit {
+    width: 100%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.148);
+    height: 100vh;
+    position: absolute;
+    top: 4rem;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    /* Adjust the blur intensity */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Optional semi-transparent overlay color */
+
+}
+
+
+
+@media (max-width:770px) {
+
+    .profile-page .profile-edit {
+        width: 100%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.148);
+        height: 100px;
+        position: absolute;
+        top: 4rem;
+
+    }
+
+    .profile-page .user-profile {
+        margin-top: 0rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 0px;
+        background: #ffffff;
+        box-shadow: inset 0px 0px 0px #ebebeb,
+            inset -1px -1px 2px #ffffff;
+    }
+
+    .profile-page .user-profile .user-info {
+        /* border: 1px solid rgb(114, 121, 250); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .profile-page .user-profile .user-info .user-bio {
+        text-align: center;
+
+    }
+
+    .profile-page .user-profile .user-info .btn {
+        justify-content: space-evenly;
+
+    }
+
+    .profile-page .profile-page-posts {
+        width: 95%;
+
+    }
+
+    .profile-page {
+        padding: 0px;
+        padding-top: 4rem;
+
+    }
+    .profile-page .user-profile .user-info .follow-info {
+        font-size: 1rem;
+      
+        gap: 2.5rem;
+    
+    }
+
+
+}

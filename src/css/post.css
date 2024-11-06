@@ -1,0 +1,318 @@
+.post {
+
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 1rem;
+    border-radius: 25px;
+    border-radius: 25px;
+    background: #f4f0f0;
+    box-shadow: 5px 5px 10px #979595,
+        -5px -5px 10px #ffffff;
+      
+}
+
+.post .picture {
+    height: 300px;
+    object-fit: fill;
+    background-color: white;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.post .post-edit-form {
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    /* background-color: #000; */
+    backdrop-filter: blur(40px);
+    padding: 1rem;
+    z-index: 10;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+}
+
+.post .post-edit-form .top {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.post .post-edit-form p {
+    width: 100%;
+    color: rgb(63, 62, 62);
+}
+
+.post .post-edit-form input {
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid gray;
+    background: none;
+}
+
+.post .post-edit-form textarea {
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid gray;
+    background: none;
+    padding: 0.5rem 0px;
+
+}
+
+.post .post-edit-form button {
+    /* border: 1px solid black; */
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+
+}
+
+@media (max-width:600px) {
+    .post {
+        height: fit-content;
+    }
+}
+
+.post .comment-box {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    /* border: 1px solid grey; */
+    border-radius: 25px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.post .comment-box .top {
+    height: 12%;
+    /* background-color: black; */
+    color: black;
+    padding: 0px 20px;
+
+}
+
+
+.post .comment-box .top p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.post .comment-box .top i {
+    font-size: 1.2rem;
+
+}
+
+.post .share-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.455);
+    backdrop-filter: blur(30px);
+    /* This blurs the background behind content */
+    background: rgba(0, 0, 0, 0.3);
+    /* Optional: add semi-transparent overlay */
+    color: white;
+    left: 0px;
+    top: 0px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post .share-box .share-link {
+    color: blue;
+    background-color: white;
+    padding: 2rem 0rem;
+    border-radius: 10px;
+
+    overflow: hidden;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.post .share-box button {
+    color: #fff;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #212121;
+    border: 1px solid #212121;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #000, -6px -6px 12px #2f2f2f;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.post .share-box button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #000, inset -4px -4px 12px #1f1f1f;
+}
+
+.post .like-box {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 60%;
+    left: 0px;
+    bottom: 0px;
+    padding: 1rem;
+}
+
+.user-profile-pic {
+
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    object-fit: fill;
+
+}
+
+.post .like-box .top {
+    border-bottom: 0px;
+}
+
+.post .like-box i {
+    font-size: 1.5rem;
+}
+
+.post .like-persons {
+    height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    gap: 1rem;
+    overflow-x: visible;
+    padding: 1rem;
+}
+
+.post .like-persons .person-card {
+    display: flex;
+
+    gap: 1rem;
+    align-items: center;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #787878,
+        -20px -20px 60px #ffffff;
+    padding: 5px 10px;
+}
+
+.post .like-persons .person-card .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #1B1F28;
+    color: white;
+}
+
+.post .like-persons .person-card .name {}
+
+.post .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 15%;
+    color: black;
+
+}
+
+.post .top .menu {
+
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    right: 30px;
+}
+
+.post .top .left {
+    display: flex;
+
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.post .top .left .owner-profile {
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.post .top .left .owner-name {
+    color: #000;
+}
+
+.post .top .right {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.post .about {
+
+    color: #000;
+}
+
+.post .about .title {
+    color: #000;
+    font-size: 1rem;
+}
+
+.post .about .description {
+    color: #000;
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 20px;
+}
+
+
+.post .bottom {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.post .bottom i {
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    height: fit-content;
+
+}
+
+
+.post .bottom .left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

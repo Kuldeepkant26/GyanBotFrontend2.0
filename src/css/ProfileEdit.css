@@ -1,0 +1,110 @@
+.profile-edit-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    top: 0px;
+    backdrop-filter: blur(10px);
+    /* Adjust the blur intensity */
+    background-color: rgba(32, 31, 31, 0.2);
+    /* Optional semi-transparent overlay color */
+
+}
+
+.profile-edit-form .edit-form {
+    width: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 29px 29px 53px #969696,
+        -29px -29px 53px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.profile-edit-form .edit-form div {
+    width: 100%;
+
+}
+
+.profile-edit-form .edit-form .up-name {}
+
+.profile-edit-form .edit-form .up-name p {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.profile-edit-form .edit-form .up-name input {
+    width: 100%;
+    padding: 10px 10px;
+    /* border-bottom: 1px solid grey; */
+    outline: none;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #d9d9d9,
+        inset -5px -5px 10px #ffffff;
+}
+
+.profile-edit-form .edit-form .up-bio {
+    width: 100%;
+
+}
+
+
+.profile-edit-form .edit-form .up-bio p {
+    font-size: 0.85rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+
+.profile-edit-form .edit-form .up-bio textarea {
+    width: 100%;
+    outline: none;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #d9d9d9,
+        inset -5px -5px 10px #ffffff;
+
+}
+
+.profile-edit-form .edit-form .up-grade label {
+    color: gray;
+
+}
+
+
+.profile-edit-form .edit-form .profile-edit-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.profile-edit-form .edit-form button {
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.profile-edit-form .edit-form .profile-edit-top h3 {}
+
+
+
+@media (max-width:600px) {
+
+    .profile-edit-form .edit-form {
+        width: 98%;
+
+    }
+
+}
