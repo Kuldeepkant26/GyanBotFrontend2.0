@@ -104,6 +104,7 @@
     width: 200px;
     border-radius: 50%;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .profile-page .user-profile .user-info {
