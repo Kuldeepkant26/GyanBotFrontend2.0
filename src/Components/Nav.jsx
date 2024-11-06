@@ -40,14 +40,12 @@ function Nav() {
                     </Link>
 
                     {localStorage.getItem('gyanbot-auth-token') && currUser ?
-
                         <>
-                           
                             <button className="options" onClick={() => { toggleMenu(), handelLogout(), navigate('/') }}>
                                 Logout
                             </button>
                             <Link className="options " to={`/profile/${currUser._id}`} onClick={toggleMenu}>
-                                {currUser.profilePicture ? <img className='user-profile-pic m-auto' src={currUser.profilePicture} alt='A'></img> : <p className='profile-button'>
+                                {currUser.profilePicture ? <img className='user-profile-pic m-auto object-cover' src={currUser.profilePicture} alt='A'></img> : <p className='profile-button'>
                                     {currUser.name[0]}
                                 </p>}
                             </Link>

@@ -11,7 +11,7 @@
     /* background-color: #eddbdd; */
     /* background-color: #c8d7cb; */
     /* background-color: #989EA1; */
-  
+
 
 
 }
@@ -147,7 +147,8 @@
 
 }
 
-.profile-page .user-profile .user-info .btn button,.profile-page .user-profile .user-info .btn .button {
+.profile-page .user-profile .user-info .btn button,
+.profile-page .user-profile .user-info .btn .button {
     height: 3rem;
     width: 9rem;
     font-size: 1rem;
@@ -159,13 +160,22 @@
     background: #ffffff;
     box-shadow: inset 5px 5px 10px #ebebeb,
         inset -5px -5px 10px #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .profile-page .user-profile .user-info .btn button:hover {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 20px #d1d1d1,
+        inset -6px -6px 20px #ffffff;
+
+}
+
+.profile-page .user-profile .user-info .btn .button:hover {
     font-size: 0.9rem;
     font-weight: 500;
     background: #ffffff;
@@ -183,7 +193,7 @@
     display: flex;
     flex-direction: column;
     /* background: #ffffff; */
-   
+
 
     /* background-color: #c8d7cb;
     background-color: #989EA1;
@@ -291,11 +301,12 @@
         padding-top: 4rem;
 
     }
+
     .profile-page .user-profile .user-info .follow-info {
         font-size: 1rem;
-      
+
         gap: 2.5rem;
-    
+
     }
 
 

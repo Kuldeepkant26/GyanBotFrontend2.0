@@ -12,6 +12,7 @@ function Signup() {
     let [email, setEmail] = useState("")
     let [password, setPassword] = useState("")
     let [grade, setGrade] = useState("grade1-5")
+    const [updating, setUpdating] = useState(false)
 
     //function to empty the form
     function emptyform() {
@@ -24,6 +25,11 @@ function Signup() {
     async function handelSubmit(e) {
         e.preventDefault();
         try {
+            if (updating) {
+                return toast.warn('Please wait')
+            }
+            setUpdating(true)
+            toast.loading("Signing in, please wait...")
             const res = await axios.post(`${import.meta.env.VITE_BURL}/auth/signup`, {
                 name, email, password, grade
             })
@@ -31,6 +37,8 @@ function Signup() {
             localStorage.setItem('gyanbot-auth-token', res.data.token)
             setcurrUser(res.data.user);
             toast.success(res.data.message);
+            toast.dismiss();
+            setUpdating(false);
             emptyform()
             navigate('/')
         } catch (error) {

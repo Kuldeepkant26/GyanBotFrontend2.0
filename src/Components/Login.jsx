@@ -10,6 +10,7 @@ function Login() {
     const navigate = useNavigate()
     let [email, setEmail] = useState("")
     let [password, setPassword] = useState("")
+    const [updating, setUpdating] = useState(false)
 
     //function to empty the form
     function emptyform() {
@@ -20,13 +21,20 @@ function Login() {
     async function handelSubmit(e) {
         e.preventDefault();
         try {
+            if (updating) {
+                return toast.warn('Please wait')
+            }
+            setUpdating(true)
+            toast.loading("Signing in, please wait...")
             const res = await axios.post(`${import.meta.env.VITE_BURL}/auth/login`, {
                 email, password
             })
             console.log(res.data);
             localStorage.setItem('gyanbot-auth-token', res.data.token)
             setcurrUser(res.data.user);
+            toast.dismiss();
             toast.success(res.data.message);
+            setUpdating(false);
             emptyform()
             navigate('/')
 

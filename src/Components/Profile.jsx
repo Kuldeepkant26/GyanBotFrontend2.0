@@ -17,6 +17,8 @@ function Profile() {
     const [showFollower, setShowFollower] = useState(false)
     const [showFollowing, setShowFollowing] = useState(false)
 
+    const [updating, setUpdating] = useState(false);
+
     function handleProfileShare() {
         // Get the current URL
         const currentUrl = window.location.href;
@@ -36,7 +38,7 @@ function Profile() {
     async function fetchUserP() {
         try {
             const res = await axios.get(`${import.meta.env.VITE_BURL}/auth/getuser/${id}`)
-          
+
             setThisUser(res.data.user)
         } catch (error) {
             logout()
@@ -74,9 +76,22 @@ function Profile() {
         }
     }
     async function handelFollow() {
-        const res = await axios.put(`${import.meta.env.VITE_BURL}/auth/follow/${currUser._id}/${id}`)
-        fetchUser(localStorage.getItem('gyanbot-auth-token'))
-        fetchUserP()
+        try {
+            if (updating) {
+                return toast.warn('Wait')
+            }
+            setUpdating(true)
+            toast.loading('Updating...')
+            const res = await axios.put(`${import.meta.env.VITE_BURL}/auth/follow/${currUser._id}/${id}`)
+            fetchUser(localStorage.getItem('gyanbot-auth-token'))
+            fetchUserP()
+            if (res) {
+                setUpdating(false)
+                toast.dismiss();
+            }
+        } catch (error) {
+            setUpdating(false)
+        }
     }
 
     function handelPrfileMenu() {

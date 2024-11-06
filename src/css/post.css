@@ -14,7 +14,7 @@
     background: #f4f0f0;
     box-shadow: 5px 5px 10px #979595,
         -5px -5px 10px #ffffff;
-      
+
 }
 
 .post .picture {
@@ -175,12 +175,15 @@
 }
 
 .user-profile-pic {
-
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.4rem;
+    width: 2.4rem;
     border-radius: 50%;
-    object-fit: fill;
-
+    object-fit: cover;
+    /* image-rendering: -webkit-optimize-contrast; */
+    /* For better quality on WebKit browsers */
+    image-rendering: crisp-edges;
+    /* For sharpness */
+   
 }
 
 .post .like-box .top {
@@ -264,6 +267,8 @@
     justify-content: center;
     font-size: 1.4rem;
     font-weight: 500;
+    border: 1px solid salmon;
+
 }
 
 .post .top .left .owner-name {

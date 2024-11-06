@@ -117,7 +117,7 @@ function Post({ mypost }) {
 
 
     function handelCopy() {
-        navigator.clipboard.writeText(`https://gyan-bot-backend2-0.vercel.app/${post._id}`)
+        navigator.clipboard.writeText(`https://gyan-bot-backend2-0.vercel.app/showpost/${post._id}`)
             .then(() => {
                 toast.success("Link copied")
                 setTimeout(() => {
@@ -250,7 +250,7 @@ function Post({ mypost }) {
                         <i className="ri-close-large-fill cursor-pointer" onClick={() => setsharebox(false)}></i>
                     </div>
                     <p className='share-link'>
-                        {`https://gyan-bot-backend2-0.vercel.app//${post._id}`}
+                        {`https://gyan-bot-backend2-0.vercel.app/showpost/${post._id}`}
                     </p>
                     <button onClick={() => { handelCopy() }}>Copy<i className="ri-file-copy-line"></i></button>
                 </div>
