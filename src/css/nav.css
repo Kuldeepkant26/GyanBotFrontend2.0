@@ -29,6 +29,7 @@ nav .menu {
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     transition-duration: 1s;
     gap: 1rem;
+    align-items: center;
 }
 
 nav .menu .options {
@@ -118,7 +119,8 @@ nav .menu .options:hover {
         gap: 0px;
         top: 0px;
         right: -45.5vw;
-        background-color: #161616;
+        background-color: #ffffff;
+        /* backdrop-filter: blur(40px); */
         height: 100vh;
         border: 0px;
         padding-top: 1rem;
@@ -135,6 +137,7 @@ nav .menu .options:hover {
         padding: 0.6rem;
         text-align: center;
         border-radius: 0px;
+        color: black;
 
     }
 
@@ -154,6 +157,7 @@ nav .menu .options:hover {
 
 .slidemenu {
     right: 0px !important;
+    color: black;
 }
 
 .rotate180 {
