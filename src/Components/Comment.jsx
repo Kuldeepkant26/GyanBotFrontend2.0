@@ -17,16 +17,18 @@ function Comment({ comment, fetchPost, post }) {
     }
     async function handelCommentDelete() {
         try {
+            toast.loading('Deleting...')
             const res = await axios.delete(`${import.meta.env.VITE_BURL}/posts/comment/delete/${post._id}/${comment._id}`)
             toast.success(res.data.message)
             fetchPost();
+            toast.dismiss()
         } catch (error) {
             console.log(error.response.data.message)
         }
     }
     async function handelCommentEdit() {
         try {
-            console.log("ok")
+          
             const res = await axios.put(`${import.meta.env.VITE_BURL}/posts/comment/edit/${comment._id}`, {
                 newComment
             })

@@ -152,8 +152,8 @@ function Post({ mypost }) {
 
     }
     function handelPostDelete() {
+        toast.loading('Deleting')
         const token = localStorage.getItem('gyanbot-auth-token');
-
         const res = axios.delete(
             `${import.meta.env.VITE_BURL}/posts/delete/${post._id}`,
             {
@@ -166,6 +166,7 @@ function Post({ mypost }) {
         toast.warn('Post deleted');
         fetchPosts()
         setshowmenu(false)
+        toast.dismiss()
     }
     return (
         <>

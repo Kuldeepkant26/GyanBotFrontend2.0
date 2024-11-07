@@ -9,8 +9,8 @@
     position: relative;
     border-radius: 15px;
     margin-top: 1rem;
-    border-radius: 25px;
-    border-radius: 25px;
+   
+    border-radius: 20px;
     background: #f4f0f0;
     box-shadow: 5px 5px 10px #979595,
         -5px -5px 10px #ffffff;
@@ -18,8 +18,8 @@
 }
 
 .post .picture {
-    height: 300px;
-    object-fit: fill;
+    height: 400px;
+    object-fit: contain;
     background-color: white;
     object-fit: cover;
     border-radius: 10px;
@@ -80,6 +80,7 @@
 @media (max-width:600px) {
     .post {
         height: fit-content;
+        border-radius: 10px;
     }
 }
 
