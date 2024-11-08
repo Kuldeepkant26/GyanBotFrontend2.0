@@ -28,7 +28,7 @@ function Comment({ comment, fetchPost, post }) {
     }
     async function handelCommentEdit() {
         try {
-          
+
             const res = await axios.put(`${import.meta.env.VITE_BURL}/posts/comment/edit/${comment._id}`, {
                 newComment
             })
@@ -46,9 +46,19 @@ function Comment({ comment, fetchPost, post }) {
     return (
         <div key={comment._id} className="comment-b">
             <div className="owner-info">
-                <Link className="lft flex items-center gap-3" to={`/profile/${comment.owner._id}`}>
+                <Link className="lft flex items-start gap-3" to={`/profile/${comment.owner._id}`}>
                     {comment.owner.profilePicture ? <img className='user-profile-pic' src={comment.owner.profilePicture} alt='A'></img> : <p className='profile'>{comment.owner.name[0]}</p>}
-                    <p className='text-sm uname'>{comment.owner.name}</p>
+                    <p className='text-sm uname flex flex-col leading-[15px]'>
+                        <span>
+                            {comment.owner.name}
+                        </span>
+                        <span className='text-[10px] text-gray-400'>
+                            {comment.uploadingTime ? <>{comment.uploadingTime}</> : <></>}
+                        </span>
+                    </p>
+                    <span className='text-[10px] text-gray-400 mt-[6px]'>
+                        {comment.edited ? <span>(edited)</span> : <></>}
+                    </span>
                 </Link>
                 <i className="ri-more-2-line cursor-pointer" onClick={() => { setCommentMenu(!commentMenu), handelCommentMenu() }}></i>
             </div>
