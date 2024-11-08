@@ -39,6 +39,8 @@ function Login() {
             navigate('/')
 
         } catch (error) {
+            toast.dismiss();
+            setUpdating(false);
             toast.error(error.response.data.message)
             // console.log(error)
         }
