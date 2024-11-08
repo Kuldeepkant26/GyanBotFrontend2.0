@@ -193,6 +193,7 @@ function Post({ mypost }) {
                         </p>}
                         <p className='owner-name'>
                             {post.owner.name}
+                            <p className='upload-time'>{post.uploadingTime ? <>{post.uploadingTime}</> : <></>}</p>
                         </p>
                     </Link>
                     <i className="ri-more-line right cursor-pointer" onClick={() => { handelMenu(), setshowmenu(!showmenu) }}></i>
