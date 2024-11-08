@@ -25,7 +25,7 @@ function Login() {
                 return toast.warn('Please wait')
             }
             setUpdating(true)
-            toast.loading("Signing in, please wait...")
+            toast.loading("Logging in, please wait...");
             const res = await axios.post(`${import.meta.env.VITE_BURL}/auth/login`, {
                 email, password
             })
