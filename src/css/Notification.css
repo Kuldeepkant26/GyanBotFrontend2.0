@@ -22,10 +22,14 @@
     border-radius: 1rem;
     /* background: #ffffff;
     box-shadow: 12px 12px 24px #b3b3b3,
-        -12px -12px 24px #ffffff; */
+    -12px -12px 24px #ffffff; */
     /* overflow: hidden; */
     overflow: hidden;
+    position: relative;
+
 }
+
+
 
 .notification .top {
     padding: 1rem;
@@ -35,6 +39,11 @@
     align-items: center;
 
     border-bottom: 1px solid grey;
+}
+
+.notification .top .referesh-btn {
+    color: gray;
+    cursor: pointer;
 }
 
 .notification .top i {
