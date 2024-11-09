@@ -61,7 +61,7 @@ function Nav() {
                             >
                                 Logout
                             </button>
-                            <i className="ri-notification-3-line text-[25px] relative w-fit" onClick={() => { setMenuOpen(false), setshowNotification(true) }}>
+                            <i className="ri-notification-3-line text-[25px] relative w-fit cursor-pointer"  onClick={() => { setMenuOpen(false), setshowNotification(true) }}>
                                 {newNotification.length ? <span className='no-new-noti bg-red-600 text-[15px] absolute top-0 right-[-4px] h-4 w-4 rounded-full flex items-center justify-center'>{newNotification.length}</span> : <></>
                                 }
                             </i>
