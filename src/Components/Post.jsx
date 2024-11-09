@@ -7,7 +7,7 @@ import CommentBox from './CommentBox';
 import { Link } from 'react-router-dom';
 
 function Post({ mypost }) {
-    const { currUser, fetchPosts, fetchUser } = useContext(MyContext);
+    const { currUser, fetchPosts, fetchUser, Notify } = useContext(MyContext);
     const [post, setPost] = useState(mypost);
     const [isliked, setIsliked] = useState(false);
 
@@ -66,6 +66,9 @@ function Post({ mypost }) {
             setIsliked(!isliked);
 
             setPostLikes(res.data.post.likes.length)
+            if (res.data.message === "Liked successfully") {
+                Notify(`${currUser.name} like your post`, `/showpost/${post._id}`, post.owner._id);
+            }
             fetchMyPost()
             fetchUser(localStorage.getItem('gyanbot-auth-token'))
             // setPost(res.data.post)

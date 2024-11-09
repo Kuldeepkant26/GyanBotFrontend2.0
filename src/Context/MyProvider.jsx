@@ -7,8 +7,9 @@ export const MyContext = createContext();
 const MyProvider = ({ children }) => {
     const [counter, setCounter] = useState(77);
     const [currUser, setcurrUser] = useState(null)
+    const [showNotification, setshowNotification] = useState(false)
 
-
+    const [newNotification, setnewNotification] = useState([])
     const [editProfile, setEditProfile] = useState(false);
     const [editUserInfo, setEditUserInfo] = useState(false);
     const [posts, setPosts] = useState([]);
@@ -53,8 +54,14 @@ const MyProvider = ({ children }) => {
 
     }, [editProfile])
 
+    async function Notify(message, link, toUser) {
+        await axios.post(`${import.meta.env.VITE_BURL}/notify/add`, {
+            message, link, toUser
+        })
+    }
+
     return (
-        <MyContext.Provider value={{ posts, fetchPosts, counter, currUser, setcurrUser, logout, fetchUser, editProfile, setEditProfile, editUserInfo, setEditUserInfo }}>
+        <MyContext.Provider value={{ newNotification, setnewNotification, Notify, posts, fetchPosts, counter, currUser, setcurrUser, logout, fetchUser, editProfile, setEditProfile, editUserInfo, setEditUserInfo, showNotification, setshowNotification }}>
             {children}
         </MyContext.Provider>
     );

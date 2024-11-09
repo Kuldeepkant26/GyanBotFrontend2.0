@@ -1,0 +1,89 @@
+.notification-page {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.418);
+    z-index: 100;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 3rem;
+    backdrop-filter: blur(5px);
+}
+
+.notification {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 400px;
+    border-radius: 1rem;
+    /* background: #ffffff;
+    box-shadow: 12px 12px 24px #b3b3b3,
+        -12px -12px 24px #ffffff; */
+    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.notification .top {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid grey;
+}
+
+.notification .top i {
+    cursor: pointer;
+}
+
+.notification .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    gap: 1rem;
+    /* overflow-y: scroll; */
+    overflow: hidden;
+
+
+}
+
+.notification .bottom .nofication-box {
+    width: 100%;
+    height: 100%;
+
+    padding: 0.5rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.notification .bottom i {}
+
+.notification .bottom h3 {
+    font-size: 1rem;
+    color: grey;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+
+@media (max-width:600px) {
+    .notification {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 400px;
+        border-radius: 1rem;
+    }
+}

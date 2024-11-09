@@ -13,7 +13,7 @@ function ShowPost() {
         console.log(res.data.post);
         setPost(res.data.post)
     }
-    console.log(pid)
+  
     useEffect(() => {
         fetchPost()
 

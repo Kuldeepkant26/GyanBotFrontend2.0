@@ -88,6 +88,9 @@ function Profile() {
             if (res) {
                 setUpdating(false)
                 toast.dismiss();
+                if (res.data.message === "Followed successfully") {
+                    Notify(`${currUser.name} Started following you`, `/profile/${id}`, id);
+                }
             }
         } catch (error) {
             setUpdating(false)

@@ -19,7 +19,7 @@ function Comment({ comment, fetchPost, post }) {
         try {
             toast.loading('Deleting...')
             const res = await axios.delete(`${import.meta.env.VITE_BURL}/posts/comment/delete/${post._id}/${comment._id}`)
-            toast.success(res.data.message)
+           
             fetchPost();
             toast.dismiss()
         } catch (error) {

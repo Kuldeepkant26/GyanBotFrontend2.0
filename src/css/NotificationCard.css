@@ -1,0 +1,66 @@
+.notification-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #ffffff;
+    box-shadow: 7px 7px 14px #d6d6d6,
+        -7px -7px 14px #ffffff;
+    position: relative;
+
+}
+
+.notification-card .new-logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
+
+.notification-card .topnoti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.notification-card .topnoti .message {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notification-card .topnoti .view-btn {
+    background-color: rgb(250, 62, 62);
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    margin-left: 1.7rem;
+}
+
+.notification-card .topnoti .message i {
+    font-size: 1.9rem;
+}
+
+.notification-card .botnoti {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.4rem;
+    align-items: center;
+}
+
+.notification-card .botnoti .time-ago {
+    font-size: 10px;
+    color: #bdbcbc;
+    position: relative;
+
+}
+
+.notification-card i {
+    font-size: 1rem;
+}

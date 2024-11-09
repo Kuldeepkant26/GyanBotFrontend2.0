@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import Comment from './Comment';
 
 function CommentBox({ post, fetchMyPost }) {
-    const { currUser } = useContext(MyContext);
+    const { currUser, Notify } = useContext(MyContext);
     const [comment, setComment] = useState('');
     const [mypost, setMypost] = useState(null);
     const [updating, setUpdating] = useState(false);
@@ -30,6 +30,7 @@ function CommentBox({ post, fetchMyPost }) {
             fetchMyPost();
             setUpdating(false);
             scrollToBottom(); // Scroll to the bottom after adding a comment
+            Notify(`${currUser.name} Comment on your post`, `/showpost/${post._id}`, post.owner._id);
         } catch (error) {
             toast.error(error.response?.data.message || "Error adding comment");
         }
