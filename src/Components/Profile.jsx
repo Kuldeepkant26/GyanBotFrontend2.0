@@ -9,7 +9,7 @@ import Post from './Post'
 function Profile() {
     const navigate = useNavigate()
     const { id } = useParams()
-    const { logout, currUser, posts, fetchPosts, fetchUser, setEditProfile, setEditUserInfo, editUserInfo, editProfile } = useContext(MyContext)
+    const { logout, currUser, posts, fetchPosts, fetchUser, setEditProfile, setEditUserInfo, editUserInfo, editProfile, Notify } = useContext(MyContext)
     const [showPosts, setShowPosts] = useState([])
     const [profileMenu, setProfileMenu] = useState(false)
     const [thisUser, setThisUser] = useState(null)
