@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../css/Notification.css';
 import { MyContext } from '../Context/MyProvider';
 import NotificationCard from './NotificationCard';
+import { toast } from 'react-toastify';
 
 function Notification() {
     const { setshowNotification, currUser, newNotification, setnewNotification, fetchUser } = useContext(MyContext);
@@ -20,9 +21,14 @@ function Notification() {
     }, [currUser]); // Re-run when `currUser` changes
 
     function handelReferesh() {
+        toast.loading("Refereshing notifications")
         fetchUser(localStorage.getItem('gyanbot-auth-token'))
         setAllNotifications(currUser.notifications);
         setnewNotification(currUser.notifications.filter((noti) => noti.issNew))
+        setTimeout(() => {
+            toast.dismiss()
+            toast.info('Updated notifications')
+        }, 1500)
     }
 
     return (
