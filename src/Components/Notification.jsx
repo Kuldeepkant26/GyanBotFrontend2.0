@@ -36,7 +36,7 @@ function Notification() {
                     <>
                         <i className="ri-notification-2-line"></i>
                         <h3>Your notifications live here</h3>
-                        <p>Subscribe to your favourite channels to receive notifications about their latest videos</p>
+                        
                     </>
                 )}
             </div>
