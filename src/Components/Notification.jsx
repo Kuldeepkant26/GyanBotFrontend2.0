@@ -31,6 +31,11 @@ function Notification() {
         }, 1500)
     }
 
+
+    useEffect(() => {
+      
+    }, []);
+
     return (
         <div className='notification'>
 

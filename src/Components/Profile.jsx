@@ -142,12 +142,13 @@ function Profile() {
                         </> : <p>Not following anyone</p>}
 
                     </div>
-                    <i className="ri-more-line absolute top-2 right-4 cursor-pointer" onClick={handelPrfileMenu}></i>
+                    <i className="ri-settings-4-line absolute top-2 right-4 cursor-pointer text-[22px] hover:rotate-45 transform transition duration-300" onClick={handelPrfileMenu}></i>
                     <div className="profile-menu" style={{ display: profileMenu ? 'block' : 'none' }}>
                         {currUser && thisUser && currUser._id === thisUser._id ?
                             <>
                                 <p onClick={() => setEditUserInfo(true)}>Edit info</p>
                                 <p onClick={() => { setEditProfile(true) }}>Update picture</p>
+                                <p onClick={() => { logout(), navigate('/') }}>Logout<i className="ri-logout-box-r-line"></i> </p>
                             </> :
                             <p>Report</p>
                         }

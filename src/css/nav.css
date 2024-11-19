@@ -90,6 +90,7 @@ nav .menu .options:hover {
 
     }
 
+
     #mnuclose {
 
         display: block;
@@ -150,8 +151,8 @@ nav .menu .options:hover {
         font-size: 1.5rem;
         font-weight: 600;
         border-radius: 50%;
-        color: black;
-        background-color: white;
+        color: white;
+        background-color: black;
     }
 }
 
