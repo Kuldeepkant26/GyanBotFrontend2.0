@@ -45,12 +45,21 @@ function Home2() {
         const limitedHistory = chatHistory.slice(-6);
         const historyString = limitedHistory.map(item => `${item.role}: ${item.message}`).join("\n");
 
-        return ChatPromptTemplate.fromMessages([
-            ["system", "You are an AI assistant who provides helpful and relevant responses based on the user's input and context."],
-            ["system", "try to summerize the answer to user questions within 4-6 lines, remamber code do not count in summery you can write required code as much as needed"],
-            ["system", historyString],
-            ["human", uprompt]
-        ]);
+        if (localStorage.getItem('gyanbot-auth-token')) {
+            return ChatPromptTemplate.fromMessages([
+                ["system", `You are an AI assistant who provides helpful and relevant responses based on the user's input and context as well as based on user info - (username-${currUser.name} , user Grade - ${currUser.grade}), user bio- ${currUser.bio} ) you can use this user information to provide personalized responses and also use vocabulary according to user grade`],
+                ["system", "try to summerize the answer to user questions within 4-6 lines, remamber code do not count in summery you can write required code as much as needed"],
+                ["system", historyString],
+                ["human", uprompt]
+            ]);
+        } else {
+            return ChatPromptTemplate.fromMessages([
+                ["system", "You are an AI assistant(named GyanBot) who provides helpful and relevant responses based on the user's input and context"],
+                ["system", "try to summerize the answer to user questions within 4-6 lines, remamber code do not count in summery you can write required code as much as needed"],
+                ["system", historyString],
+                ["human", uprompt]
+            ]);
+        }
     }
 
     async function asktobot() {
