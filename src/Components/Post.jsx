@@ -61,9 +61,10 @@ function Post({ mypost }) {
         }, 3000);
 
         try {
+            setIsliked(!isliked);
             const res = await axios.put(`${import.meta.env.VITE_BURL}/posts/like/${currUser._id}/${post._id}`);
             // const updatedLikes = res.data.post.likes;  // Assuming API response includes updated likes array
-            setIsliked(!isliked);
+
 
             setPostLikes(res.data.post.likes.length)
             if (res.data.message === "Liked successfully") {
