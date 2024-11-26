@@ -58,7 +58,7 @@ function Login() {
                     <input
                         required
                         type={showPass ? 'text' : 'password'}
-                        placeholder="Set Password"
+                        placeholder="Enter password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         autoComplete="new-password"
