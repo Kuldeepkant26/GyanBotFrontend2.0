@@ -13,6 +13,7 @@ function Signup() {
     let [password, setPassword] = useState("")
     let [grade, setGrade] = useState("grade1-5")
     const [updating, setUpdating] = useState(false)
+    const [showPass, setShowPass] = useState(false);
 
     //function to empty the form
     function emptyform() {
@@ -57,14 +58,19 @@ function Signup() {
                 <h1>Welcome to Gyanbot</h1>
                 <input required type="text" placeholder='Enter Full Name' value={name} onChange={(e) => setName(e.target.value)} autoComplete="new-name" />
                 <input required type="email" placeholder='Enter Email' value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="new-email" />
-                <input
-                    required
-                    type="password"
-                    placeholder="Set Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    autoComplete="new-password"
-                />
+                <span className=''>
+                    <input
+                        required
+                        type={showPass ? 'text' : 'password'}
+                        placeholder="Set Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        autoComplete="new-password"
+                    />
+
+                    {showPass ? <i className="ri-eye-fill" onClick={() => setShowPass(!showPass)}></i> : <i className="ri-eye-off-fill" onClick={() => setShowPass(!showPass)}></i>}
+
+                </span>
                 <div className='grade'>
                     <label htmlFor="grade">Choose your grade:</label>
                     <select name="grade" id="grade" value={grade} onChange={(e) => setGrade(e.target.value)}>

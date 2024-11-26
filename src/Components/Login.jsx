@@ -11,6 +11,7 @@ function Login() {
     let [email, setEmail] = useState("")
     let [password, setPassword] = useState("")
     const [updating, setUpdating] = useState(false)
+    const [showPass, setShowPass] = useState(false);
 
     //function to empty the form
     function emptyform() {
@@ -53,7 +54,19 @@ function Login() {
                     <h1>Welcome back!</h1>
                 </div>
                 <input required type="email" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='user-email' />
-                <input required type="password" placeholder='Enter your Password' value={password} onChange={(e) => setPassword(e.target.value)} autoComplete='user-pass' />
+                <span className=''>
+                    <input
+                        required
+                        type={showPass ? 'text' : 'password'}
+                        placeholder="Set Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        autoComplete="new-password"
+                    />
+
+                    {showPass ? <i className="ri-eye-fill" onClick={() => setShowPass(!showPass)}></i> : <i className="ri-eye-off-fill" onClick={() => setShowPass(!showPass)}></i>}
+
+                </span>
                 <button className='btn lbtn' type='submit'>Login</button>
                 <p onClick={() => navigate('/signup')}>New user?</p>
             </form>
