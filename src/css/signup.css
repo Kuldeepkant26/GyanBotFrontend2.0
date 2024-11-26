@@ -146,6 +146,19 @@
 
   .signup-page .sform .grade {
   }
+  .signup-page .sform span {
+    width: 70%;
+
+    position: relative;
+  }
+  .signup-page .sform span i {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+  }
+  .signup-page .sform span input {
+    width: 100%;
+  }
 }
 
 /* From Uiverse.io by elijahgummer */
